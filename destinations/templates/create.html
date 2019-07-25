@@ -4,9 +4,28 @@
 {% block title %}Create{% endblock title %}
 
 {% block content %}
-<form action="{% url 'destination-create' %}" method="POST" enctype="multipart/form-data">
+<br>
+<h1 style="font-family:verdana; color:white;">Create Your Fancy Trip</h1>
+<br>
+<br>
+<br>
+<br>
+
+<form style="color:white; font-size:25px;" action="{% url 'destination-create' %}" method="POST" enctype="multipart/form-data">
+  <br>
+  <br>
+  <br>
+  <br>
   {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" value="Create">
+  {{form|crispy}}
+
+
+
+
+
+<br>
+  <center><input style="font-size:50px;" class="btn btn-outline-light" type="submit" value="          Create          "></center>
 </form>
+<br>
+<br>
 {% endblock content %}

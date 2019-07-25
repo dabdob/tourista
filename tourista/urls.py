@@ -23,6 +23,7 @@ from destinations import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    path('destinations/home/', views.destination_home, name='destination-home'),
     path('destinations/list/', views.destination_list, name='destination-list'),
     path('destinations/detail/<int:destination_id>/',
          views.destination_detail, name='destination-detail'),

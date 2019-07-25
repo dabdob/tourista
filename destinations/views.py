@@ -3,6 +3,13 @@ from .models import Destination
 from .forms import DestinationForm
 
 
+def destination_home(request):
+    context = {
+        "destinations": Destination.objects.all()
+    }
+    return render(request, 'home.html', context)
+
+
 def destination_list(request):
     context = {
         "destinations": Destination.objects.all()

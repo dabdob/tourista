@@ -4,9 +4,19 @@
 {% block title %}Update{% endblock title %}
 
 {% block content %}
-<form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
+<br>
+<h1 style="font-family:verdana; color:white;">Update Your Fancy Trip</h1>
+<br>
+<br>
+<br>
+<br>
+<form style="color:white; font-size:25px;" action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
+<br>
+<br>
+<br>
+<br>
   {% csrf_token %}
   {{form.as_p}}
-  <input type="submit" value="Update">
+  <center><input style="font-size:50px; font-family:verdana;" class="btn btn-outline-light" type="submit" value="          Update          "></center>
 </form>
 {% endblock content %}
